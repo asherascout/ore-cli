@@ -50,7 +50,7 @@ impl Miner {
             .get_latest_blockhash_with_commitment(CommitmentConfig::confirmed())
             .await
             .unwrap();
-        println!(hash);
+        println!("{}", hash);
         let mut send_cfg = RpcSendTransactionConfig {
             skip_preflight: true,
             preflight_commitment: Some(CommitmentLevel::Confirmed),
